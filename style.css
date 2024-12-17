@@ -45,25 +45,20 @@ nav ul li a {
 .hero h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    
 }
 
 form {
     display: flex;
     gap: 0.5rem;
-    margin: 8rem;
+    margin: 8rem auto; /* Center form horizontally */
     justify-content: center;
-    
-    
 }
 
 form input, form select, form button {
     padding: 0.5rem;
     font-size: 1rem;
-    
     padding-right: 20px;
     padding-left: 20px;
-    
 }
 
 .highlights {
@@ -85,7 +80,7 @@ form input, form select, form button {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 calc(25% - 20px); /* Responsive flex item */
     max-width: 250px;
     margin-bottom: 20px;
 }
@@ -105,6 +100,7 @@ form input, form select, form button {
     font-size: 16px;
     color: #555;
 }
+
 .booking-btn {
     background-color: #28a745; /* Green background */
     color: white; /* White text */
@@ -121,6 +117,7 @@ form input, form select, form button {
 .booking-btn:hover {
     background-color: #218838; /* Darker green on hover */
 }
+
 .contact {
     max-width: 600px;
     margin: 20px auto;
@@ -132,7 +129,6 @@ form input, form select, form button {
 
 .contact h2 {
     text-align: center;
-
 }
 
 label {
@@ -143,9 +139,7 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="message"],
-
-
+input[type="message"], /* Ensure this is an input type */
 button {
     background-color: #28a745; /* Green background */
     color: white; /* White text */
@@ -167,11 +161,53 @@ button:hover {
     border-top: 1px solid #ddd;
 }
 
-
 footer {
     background: #f8f9fa;
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #ddd;
     margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .listing {
+        flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    form {
+        flex-direction: column; /* Stack form inputs vertically */
+        margin: 4rem auto; /* Adjust margin for smaller screens */
+    }
+
+    form input, form select, form button {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .listing {
+        flex: 1 1 100%; /* Full width for small screens */
+    }
+
+    .hero h2 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .contact {
+        padding: 15px; /* Less padding */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button font */
+    }
 }
